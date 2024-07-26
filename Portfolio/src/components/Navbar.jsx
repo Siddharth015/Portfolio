@@ -1,43 +1,61 @@
-import React from 'react'
+import React from "react";
+import styled from "styled-components";
 
-import styled from 'styled-components'
 const Section = styled.div`
-display: flex;
-justify-content: center;
-`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%; /* Ensure it spans full width */
+  padding: 10px 0; /* Add padding for spacing */
+`;
 
 const Container = styled.div`
-width: 1400px;
-display: flex;
-justify-content: space-between;
-align-items: center;
-  padding: 10px 0px;
-`
+  width: 100%; /* Full width */
+  max-width: 1400px; /* Max width for large screens */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px; /* Padding for spacing */
+  box-sizing: border-box; /* Include padding in the element's total width and height */
+
+  @media only screen and (max-width: 768px) {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 10px;
+  }
+`;
+
 const Links = styled.div`
- display: flex;
+  display: flex;
   align-items: center;
   gap: 50px;
-`
-const Logo = styled.img`
+`;
 
-`
 const List = styled.ul`
-display: flex;
+  display: flex;
   gap: 20px;
   list-style: none;
-`
+
+  @media only screen and (max-width: 768px) {
+    display: none;
+  }
+`;
+
 const ListItem = styled.li`
-cursor: pointer;
-`
+  cursor: pointer;
+`;
+
 const Icons = styled.div`
   display: flex;
   align-items: center;
   gap: 20px;
-`
+`;
+
 const Icon = styled.img`
-width: 20px;
+  width: 20px;
   cursor: pointer;
-`
+`;
+
 const Button = styled.button`
   width: 100px;
   padding: 10px;
@@ -46,30 +64,28 @@ const Button = styled.button`
   border: none;
   border-radius: 5px;
   cursor: pointer;
-`
+`;
+
 const Navbar = () => {
   return (
     <Section>
-     <Container>
+      <Container>
         <Links>
-        <List>
-        <ListItem>Home</ListItem>
-        <ListItem>Works</ListItem>
-        <ListItem>Contact</ListItem>
-
-
-        </List>
+          <List>
+            <ListItem>Home</ListItem>
+            <ListItem>Studio</ListItem>
+            <ListItem>Works</ListItem>
+            <ListItem>Contact</ListItem>
+          </List>
         </Links>
-
         <Icons>
-        <Icon src="./img/search.png" />
-            <button>Hire Now</button>
+          {/* Changed the image due to copyright problems */}
+          <Icon src="./img/search.png" />
+          <Button>Hire Now</Button>
         </Icons>
-
-     </Container>
-
+      </Container>
     </Section>
-  )
-}
+  );
+};
 
-export default Navbar
+export default Navbar;
