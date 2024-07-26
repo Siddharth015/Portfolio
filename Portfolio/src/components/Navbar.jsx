@@ -11,24 +11,41 @@ width: 1400px;
 display: flex;
 justify-content: space-between;
 align-items: center;
+  padding: 10px 0px;
 `
 const Links = styled.div`
+ display: flex;
+  align-items: center;
+  gap: 50px;
+`
+const Logo = styled.img`
 
 `
-const Logo = styled.div`
-
+const List = styled.ul`
+display: flex;
+  gap: 20px;
+  list-style: none;
 `
-const List = styled.div`
-
-`
-const Item = styled.div`
-
+const ListItem = styled.li`
+cursor: pointer;
 `
 const Icons = styled.div`
-
+  display: flex;
+  align-items: center;
+  gap: 20px;
 `
-const Button = styled.div`
-
+const Icon = styled.img`
+width: 20px;
+  cursor: pointer;
+`
+const Button = styled.button`
+  width: 100px;
+  padding: 10px;
+  background-color: #da4ea2;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
 `
 const Navbar = () => {
   return (
@@ -36,15 +53,16 @@ const Navbar = () => {
      <Container>
         <Links>
         <List>
-        <Item>Home</Item>
-        <Item>Works</Item>
-        <Item>Contact</Item>
+        <ListItem>Home</ListItem>
+        <ListItem>Works</ListItem>
+        <ListItem>Contact</ListItem>
 
 
         </List>
         </Links>
 
         <Icons>
+        <Icon src="./img/search.png" />
             <button>Hire Now</button>
         </Icons>
 

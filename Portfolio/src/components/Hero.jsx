@@ -11,38 +11,75 @@ align items: center;
 justify-content: space-between;
 `
 const Container = styled.div`
-height: 100vh;
+
+height: 100%;
 scroll-snap-align: center;
 width: 1400px;
 display: flex;
 justify-content: space-between;
 `
 const Left = styled.div`
-
+flex: 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 20px;
+  padding-left: 100px;
 `
-const Title = styled.div`
-
+const Title = styled.h1`
+ font-size: 60px;
 `
 const WhatWeDo = styled.div`
+ display: flex;
+ margin-top: -30px;
+  align-items: center;
+  gap: 10px;
+`
+const Line = styled.img`
+  height: 5px;
+`
+const Subtitle = styled.h2`
+
+  color: #da4ea2;
 
 `
-const Line = styled.div`
+const Description = styled.p`
+  font-size: 24px;
+  color: lightgray;
 
 `
-const Subtitle = styled.div`
-
-`
-const Description = styled.div`
-
-`
-const Button = styled.div`
-
+const Button = styled.button`
+  background-color: #da4ea2;
+  color: white;
+  font-weight: 500;
+  width: 100px;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
 `
 const Right = styled.div`
+flex: 3;
+  position: relative;
+  animation: animate 2s infinite ease alternate;
+  @keyframes animate {
+    to{
+      transform: translateY(20px);
+    }
+}
 
+  
 `
-const Img = styled.div`
-
+const Img = styled.img`
+width: 800px;
+  height: 600px;
+  object-fit: contain;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
 `
 const Hero = () => {
   return (
