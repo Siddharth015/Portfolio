@@ -100,7 +100,7 @@ const Who = () => {
             <Subtitle>Development</Subtitle>
           </WhatWeDo>
           <Desc>
-           I am a web developer, a UI UX Designer and a Competetive Programmer.
+           I am a Web Developer, a UI UX Designer and a Competetive Programmer.
           </Desc>
           <Button>My projects</Button>
         </Right>
